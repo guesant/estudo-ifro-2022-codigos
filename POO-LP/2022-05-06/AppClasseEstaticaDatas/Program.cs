@@ -18,15 +18,15 @@ Console.WriteLine($"Meses de Vida: {meses}.");
 Console.WriteLine($"Anos de Vida: {anos}.");
 */
 
-Console.Write("Data de Nascimento: (DD/MM/AAAA)...: ");
-string dataNasc = Console.ReadLine()!;
+Console.Write("Data de Inicial [DD/MM/AAAA]...: ");
+string dataInicial = Console.ReadLine()!;
 
-Console.Write("Data Alvo (deixe em branco para pegar a data atual): (DD/MM/AAAA)...: ");
-string dataAlvo = Console.ReadLine()!;
+Console.Write("Data Final (deixe em branco para pegar a data atual) [DD/MM/AAAA]...: ");
+string dataFinal = Console.ReadLine()!;
 
-int idade = MDatas.CalcularIdade(dataNasc, dataAlvo);
-int meses = MDatas.CalcularMesesDeVida(dataNasc, dataAlvo);
-int dias = MDatas.CalcularDiasDeVida(dataNasc, dataAlvo);
+int idade = MDatas.CalcularIdade(dataInicial, dataFinal);
+int meses = MDatas.CalcularMesesDeVida(dataInicial, dataFinal);
+int dias = MDatas.CalcularDiasDeVida(dataInicial, dataFinal);
 
 Console.WriteLine($"- Idade: {idade}.");
 Console.WriteLine($"- Meses: {meses}.");
