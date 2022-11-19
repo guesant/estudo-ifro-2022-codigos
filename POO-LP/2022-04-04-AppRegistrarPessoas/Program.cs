@@ -39,11 +39,6 @@ do
 
     opc = Convert.ToInt32(Console.ReadLine());
 
-    //if(opc == 4)
-    //{
-    //    break;
-    //}
-
     switch (opc)
     {
         case 1:
