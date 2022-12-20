@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BDF7453-3A39-4CC0-B742-FBD6993DFD0A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SysPythonParaEstacionamentoJava</RootNamespace>
+    <AssemblyName>SysPythonParaEstacionamentoJava</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FerramentasBiblioteca">
+      <HintPath>..\FerramentasBiblioteca.dll</HintPath>
+    </Reference>
+    <Reference Include="MeusComponentes">
+      <HintPath>..\MeusComponentes.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contexto\Arquivo.cs" />
+    <Compile Include="Contexto\Dados.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormCadastrarVaga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormCadastrarVaga.Designer.cs">
+      <DependentUpon>FormCadastrarVaga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormCadastrarVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormCadastrarVeiculo.Designer.cs">
+      <DependentUpon>FormCadastrarVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormConsultarEstacionamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormConsultarEstacionamento.Designer.cs">
+      <DependentUpon>FormConsultarEstacionamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormFerramentasAdministrativas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormFerramentasAdministrativas.Designer.cs">
+      <DependentUpon>FormFerramentasAdministrativas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormBuscarEstacionamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormBuscarEstacionamentos.Designer.cs">
+      <DependentUpon>FormBuscarEstacionamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormBuscarVagas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormBuscarVagas.Designer.cs">
+      <DependentUpon>FormBuscarVagas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormBuscarVeiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormBuscarVeiculos.Designer.cs">
+      <DependentUpon>FormBuscarVeiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormRegistrarEstacionamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormRegistrarEstacionamento.Designer.cs">
+      <DependentUpon>FormRegistrarEstacionamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormRegistrarSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormRegistrarSaida.Designer.cs">
+      <DependentUpon>FormRegistrarSaida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegrasDeNegocio\Estacionamento.cs" />
+    <Compile Include="RegrasDeNegocio\Situacao.cs" />
+    <Compile Include="RegrasDeNegocio\Vaga.cs" />
+    <Compile Include="RegrasDeNegocio\Veiculo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormCadastrarVaga.resx">
+      <DependentUpon>FormCadastrarVaga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormCadastrarVeiculo.resx">
+      <DependentUpon>FormCadastrarVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormConsultarEstacionamento.resx">
+      <DependentUpon>FormConsultarEstacionamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormFerramentasAdministrativas.resx">
+      <DependentUpon>FormFerramentasAdministrativas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormBuscarEstacionamentos.resx">
+      <DependentUpon>FormBuscarEstacionamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormBuscarVagas.resx">
+      <DependentUpon>FormBuscarVagas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormBuscarVeiculos.resx">
+      <DependentUpon>FormBuscarVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormRegistrarEstacionamento.resx">
+      <DependentUpon>FormRegistrarEstacionamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormRegistrarSaida.resx">
+      <DependentUpon>FormRegistrarSaida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
